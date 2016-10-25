@@ -22,3 +22,9 @@ python-glanceclient
 python-neutronclient
 humanize
 keystoneauth1
+
+
+Flask-Login
+Flask-DebugToolbar
+dateutils
+pymysql

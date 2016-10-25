@@ -6,7 +6,7 @@ class Config:
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     DASH_MAIL_SUBJECT_PREFIX = '[dash-stack]'
     DASH_MAIL_SENDER = 'dash-stack Admin <kelepirci@dash-stack.org>'
-    DASH_ADMIN = "ozkasgarli@gmail.com"
+    DASH_ADMIN = "emre@cintay.com"
     
     @staticmethod
     def init_app(dash):
@@ -21,7 +21,7 @@ class DevelopmentConfig(Config):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
-        ('mysql+pymysql://root:Polo1043@localhost/dashDev')
+        ('mysql+pymysql://root:Asp.Net238515@localhost/dashDev')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     WTF_CSRF_ENABLED = True
     SECRET_KEY = 'you-will-never-guess'
@@ -33,13 +33,13 @@ class DevelopmentConfig(Config):
 class TestingConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
-        ('mysql://root:Polo1043@localhost/dashTest')
+        ('mysql://root:Asp.Net238515@localhost/dashTest')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     WTF_CSRF_ENABLED = False
         
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        ('mysql://root:Polo1043@localhost/dash')
+        ('mysql://root:Asp.Net238515@localhost/dash')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     WTF_CSRF_ENABLED = True
     SECRET_KEY = 'you-will-never-guess'

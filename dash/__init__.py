@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from flask_adminlte import AdminLTE
+from dash.flask_adminlte import AdminLTE
 from flask_mail import Mail
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
@@ -55,7 +55,7 @@ def create_app(config_name):
     # attach routes and custom error pages here
     
     # main application
-    from main import main as main_blueprint
+    from dash.main import main as main_blueprint
     dash.register_blueprint(main_blueprint)
     
     # auth application
